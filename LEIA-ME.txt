@@ -1,0 +1,26 @@
+APS PARCEIROS — PUBLICAÇÃO MANUAL NO GITHUB PAGES
+
+ARQUIVOS
+- index.html: página principal do novo site.
+- CNAME: domínio personalizado www.apsparceiros.com.br.
+- .nojekyll: evita processamento Jekyll desnecessário.
+
+PUBLICAÇÃO
+1. Acesse https://github.com/apsparceiros-svg/apsparceiros-svg.github.io
+2. Entre na branch principal (normalmente main).
+3. Faça upload dos três arquivos desta pasta para a raiz do repositório.
+4. Se o GitHub perguntar, confirme o commit das alterações.
+5. Em Settings > Pages, confira se a origem está configurada para Deploy from a branch, branch main e pasta /(root), ou mantenha a configuração já funcional do repositório.
+6. Aguarde a publicação e teste primeiro o endereço github.io.
+
+IMPORTANTE SOBRE O DOMÍNIO
+- Não altere ainda os registros DNS no Registro.br.
+- Primeiro confirme que o site está publicado e funcionando no endereço github.io.
+- Depois configure o domínio personalizado em Settings > Pages e confira o status de DNS antes de mexer nos registros do Registro.br.
+- Preserve os registros MX, SPF, DKIM e demais TXT usados pelo e-mail.
+
+WHATSAPP
+O HTML ainda contém um número fictício de exemplo (5512999999999). Enquanto ele não for substituído pelo número oficial, os botões de contato direcionam para o e-mail apsparceiros@gmail.com. Antes da publicação final, substitua esse valor no index.html pelo WhatsApp completo, somente números, com 55 + DDD + número.
+
+OBSERVAÇÃO
+O novo HTML incorpora a apresentação institucional e os principais serviços do site atual, além de destacar o portfólio de mais de 20 sistemas estruturais, seus recursos de dimensionamento/detalhamento, quantitativos, relatórios PDF e suporte técnico. Também preserva os valores de qualidade, segurança, agilidade e pós-venda. Não altera automaticamente o repositório, o site atual nem o DNS.
