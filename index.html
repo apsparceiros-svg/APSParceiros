@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="APS PARCEIROS: engenharia, gestão de obras, projetos, construções, reformas e consultoria para investimentos imobiliários no Litoral Norte de São Paulo.">
+  <meta name="theme-color" content="#10100f">
+  <title>APS PARCEIROS | Engenharia, Gestão de Obras e Construção</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --ink:#171715;--ink2:#24231f;--gold:#c7a875;--gold2:#dfc69d;
+      --paper:#f6f4ef;--white:#fff;--muted:#77756f;--line:#e6e1d7;
+      --serif:"Playfair Display",Georgia,serif;--sans:"DM Sans",Arial,sans-serif;
+      --max:1180px;--shadow:0 18px 55px rgba(0,0,0,.12)
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:88px}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.65}
+    img{display:block;width:100%;height:100%;object-fit:cover}
+    a{color:inherit;text-decoration:none}
+    button{font:inherit}
+    .wrap{width:min(var(--max),calc(100% - 48px));margin:auto}
+    .eyebrow{display:inline-flex;align-items:center;gap:12px;color:var(--gold);font-size:.72rem;font-weight:700;letter-spacing:.19em;text-transform:uppercase}
+    .eyebrow:before{content:"";width:32px;height:1px;background:currentColor}
+    h1,h2,h3,p{margin-top:0}
+    h1,h2,.serif{font-family:var(--serif);font-weight:500;line-height:1.12}
+    h2{font-size:clamp(2.1rem,4.2vw,3.6rem);margin:17px 0}
+    .lead{font-size:1.08rem;color:#69675f;max-width:680px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:14px 22px;border:1px solid var(--gold);background:var(--gold);color:#171715;font-size:.82rem;font-weight:700;letter-spacing:.04em;transition:.25s}
+    .btn:hover{background:var(--gold2);border-color:var(--gold2);transform:translateY(-2px)}
+    .btn.outline{background:transparent;color:#fff;border-color:rgba(255,255,255,.55)}
+    .btn.outline:hover{background:#fff;color:var(--ink)}
+    .btn.dark{background:var(--ink);border-color:var(--ink);color:#fff}
+    .topbar{background:#0d0d0c;color:#c8c5bd;font-size:.72rem;letter-spacing:.06em}
+    .topbar .wrap{display:flex;justify-content:space-between;gap:16px;padding:9px 0}
+    header{position:sticky;top:0;z-index:50;background:rgba(23,23,21,.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08)}
+    .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px;color:#fff}
+    .brand{display:flex;align-items:center;gap:12px;min-width:205px}
+    .brand-mark{width:42px;height:42px;border:1px solid var(--gold);display:grid;place-items:center;color:var(--gold);font-family:var(--serif);font-size:1.25rem}
+    .brand-name{font-weight:700;letter-spacing:.16em;font-size:.9rem}
+    .brand-sub{display:block;color:#b9b5ab;font-size:.56rem;letter-spacing:.18em;margin-top:2px}
+    .navlinks{display:flex;align-items:center;gap:25px;font-size:.77rem;color:#e3e0d8}
+    .navlinks a:hover{color:var(--gold2)}
+    .nav .btn{padding:11px 16px;font-size:.72rem}
+    .menu-btn{display:none;background:none;border:1px solid #555;color:#fff;padding:9px 12px}
+    .hero{min-height:650px;position:relative;display:flex;align-items:center;color:#fff;background:#24231f;overflow:hidden}
+    .hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(12,12,11,.88) 0%,rgba(12,12,11,.65) 48%,rgba(12,12,11,.16) 100%),url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2200&q=85") center/cover}
+    .hero-content{position:relative;z-index:1;padding:100px 0 115px;max-width:760px}
+    .hero h1{font-size:clamp(3rem,6.6vw,5.7rem);margin:23px 0 24px;letter-spacing:-.035em}
+    .hero h1 em{font-style:normal;color:var(--gold2)}
+    .hero p{font-size:1.08rem;color:#e0ddd5;max-width:610px;margin-bottom:32px}
+    .hero-actions{display:flex;gap:13px;flex-wrap:wrap}
+    .hero-note{margin-top:55px;padding-top:18px;border-top:1px solid rgba(255,255,255,.25);display:flex;gap:30px;flex-wrap:wrap;color:#d4d0c7;font-size:.75rem;letter-spacing:.04em}
+    .hero-note span:before{content:"◆";color:var(--gold);font-size:.55rem;margin-right:9px}
+    .intro{padding:100px 0 90px;background:var(--white)}
+    .intro-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:9%;align-items:center}
+    .intro h2{max-width:590px}
+    .intro-copy{color:#68665f}
+    .intro-photo{height:440px;position:relative}
+    .intro-photo img{box-shadow:var(--shadow)}
+    .photo-tag{position:absolute;right:-18px;bottom:24px;background:var(--ink);color:#fff;padding:19px 24px;max-width:220px;font-family:var(--serif);font-size:1.2rem;line-height:1.3}
+    .stats{background:var(--ink);color:#fff;padding:30px 0}
+    .stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}
+    .stat{padding:8px 22px;border-left:1px solid rgba(255,255,255,.2)}
+    .stat strong{display:block;color:var(--gold2);font-family:var(--serif);font-size:1.35rem;font-weight:500}
+    .stat span{font-size:.75rem;color:#c9c6be}
+    .services{padding:105px 0}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:42px}
+    .section-head .lead{max-width:430px;margin-bottom:8px}
+    .service-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+    .service-card{background:#fff;display:grid;grid-template-columns:42% 58%;min-height:290px;box-shadow:0 7px 28px rgba(25,24,20,.045);transition:.25s}
+    .service-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+    .service-img{min-height:100%;overflow:hidden;background:#ddd}
+    .service-img img{transition:transform .6s}
+    .service-card:hover img{transform:scale(1.045)}
+    .service-content{padding:27px 27px 24px}
+    .service-number{color:var(--gold);font-size:.7rem;letter-spacing:.15em;font-weight:700}
+    .service-content h3{font-family:var(--serif);font-size:1.45rem;line-height:1.2;font-weight:500;margin:10px 0}
+    .service-content p{font-size:.82rem;color:#77746d;margin-bottom:13px}
+    .service-content ul{padding-left:17px;margin:0;color:#55534d;font-size:.76rem}
+    .service-content li{margin:4px 0}
+    .service-link{display:inline-block;margin-top:16px;color:#8b6b3d;font-size:.72rem;font-weight:700;border-bottom:1px solid #c7a875;padding-bottom:3px}
+    .audience{background:#1c1c19;color:#fff;padding:100px 0}
+    .audience-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:42px}
+    .audience-card{min-height:350px;position:relative;display:flex;align-items:end;overflow:hidden}
+    .audience-card:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.86),rgba(0,0,0,.05) 85%)}
+    .audience-card img{position:absolute;inset:0;transition:transform .6s}
+    .audience-card:hover img{transform:scale(1.04)}
+    .audience-copy{position:relative;z-index:1;padding:32px;max-width:510px}
+    .audience-copy h3{font-family:var(--serif);font-weight:500;font-size:2rem;margin:10px 0}
+    .audience-copy p{color:#e1ded6;font-size:.88rem;margin-bottom:0}
+    .process{padding:100px 0;background:#fff}
+    .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:45px}
+    .step{border-top:1px solid var(--gold);padding:22px 12px 0 0}
+    .step b{font-family:var(--serif);font-size:2.3rem;color:var(--gold);font-weight:500}
+    .step h3{font-size:.96rem;margin:12px 0 7px}
+    .step p{font-size:.8rem;color:#77746d}
+    .why{padding:100px 0;background:#eeeae1}
+    .why-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:8%;align-items:center}
+    .why-photo{height:490px}
+    .why-list{display:grid;grid-template-columns:1fr 1fr;gap:25px;margin-top:35px}
+    .why-item{border-top:1px solid #cfc6b6;padding-top:15px}
+    .why-item strong{display:block;font-family:var(--serif);font-size:1.15rem;font-weight:500;margin-bottom:5px}
+    .why-item span{font-size:.79rem;color:#716e66}
+    .region{padding:100px 0;background:#fff}
+    .region-box{display:grid;grid-template-columns:1fr 1fr;background:var(--ink);color:#fff}
+    .region-photo{min-height:390px}
+    .region-copy{padding:55px;align-self:center}
+    .region-copy p{color:#d1cec6}
+    .region-list{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}
+    .region-list span{border:1px solid rgba(255,255,255,.25);padding:7px 11px;font-size:.72rem;color:#eee9df}
+    .contact{padding:105px 0;background:#171715;color:#fff}
+    .contact-grid{display:grid;grid-template-columns:1fr .8fr;gap:10%;align-items:start}
+    .contact .lead{color:#c9c5bb}
+    .contact-details{margin-top:35px;display:grid;gap:15px;color:#e8e4dc;font-size:.88rem}
+    .contact-details small{display:block;color:#aaa69d;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase}
+    .contact-panel{background:#24231f;padding:32px;border:1px solid rgba(199,168,117,.35)}
+    .contact-panel h3{font-family:var(--serif);font-weight:500;font-size:1.65rem}
+    .contact-panel p{color:#c6c1b7;font-size:.84rem}
+    .contact-panel .btn{width:100%;margin-top:9px}
+    .contact-panel .btn.outline{margin-top:12px}
+    footer{background:#0d0d0c;color:#aaa69d;padding:25px 0;font-size:.7rem}
+    .footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    .footer-row strong{color:#eee9df;letter-spacing:.12em}
+    .wa-float{position:fixed;right:22px;bottom:22px;z-index:60;background:#c7a875;color:#171715;padding:13px 18px;font-size:.78rem;font-weight:700;box-shadow:0 8px 25px #0003}
+    .wa-float:hover{background:#dfc69d}
+    @media(max-width:900px){
+      .navlinks{gap:13px}.navlinks a{font-size:.7rem}.nav .btn{display:none}
+      .service-card{grid-template-columns:1fr}.service-img{height:210px}.service-grid{gap:16px}
+      .intro-grid,.why-grid{gap:5%}.service-content{padding:22px}
+      .region-copy{padding:35px}
+    }
+    @media(max-width:700px){
+      .wrap{width:min(100% - 34px,var(--max))}
+      .topbar .wrap{justify-content:center;text-align:center}.topbar .wrap span:last-child{display:none}
+      .nav{height:68px}.brand{min-width:0}.menu-btn{display:block}
+      .navlinks{display:none;position:absolute;top:68px;left:0;right:0;background:#171715;padding:18px 24px 24px;flex-direction:column;align-items:flex-start;border-top:1px solid #444}
+      .navlinks.open{display:flex}.navlinks a{font-size:.88rem}
+      .hero{min-height:630px}.hero:before{background:linear-gradient(90deg,rgba(12,12,11,.88),rgba(12,12,11,.48)),url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1100&q=80") center/cover}
+      .hero-content{padding:85px 0}.hero h1{font-size:3.25rem}.hero-note{gap:12px;flex-direction:column;margin-top:38px}
+      .intro,.services,.audience,.process,.why,.region,.contact{padding:72px 0}
+      .intro-grid,.why-grid,.contact-grid,.region-box{grid-template-columns:1fr}
+      .intro-photo{height:310px;margin:18px 10px 0 0}.photo-tag{right:-10px}
+      .stats-grid{grid-template-columns:1fr;gap:12px}.stat{padding:7px 15px}
+      .section-head{display:block}.section-head .lead{margin-top:12px}
+      .service-grid,.audience-grid{grid-template-columns:1fr}
+      .service-card{grid-template-columns:38% 62%;min-height:0}.service-img{height:auto;min-height:100%}.service-content{padding:19px}
+      .service-content h3{font-size:1.25rem}.service-content ul{font-size:.72rem}
+      .audience-card{min-height:330px}.process-grid{grid-template-columns:1fr 1fr;row-gap:12px}
+      .why-photo{height:330px;order:2}.why-list{gap:18px}
+      .region-photo{min-height:260px}.region-copy{padding:30px 25px}
+      .contact-panel{padding:25px}
+      .wa-float{right:12px;bottom:12px;padding:12px 15px}
+    }
+    @media(max-width:390px){.service-card{grid-template-columns:1fr}.service-img{height:190px}.process-grid,.why-list{grid-template-columns:1fr}.hero h1{font-size:2.8rem}}
+  </style>
+</head>
+<body>
+  <div class="topbar"><div class="wrap"><span>ENGENHARIA • CONSTRUÇÃO • GESTÃO DE OBRAS</span><span>ATENDIMENTO NO LITORAL NORTE DE SÃO PAULO</span></div></div>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#inicio" aria-label="APS Parceiros - início">
+        <span class="brand-mark">APS</span>
+        <span><span class="brand-name">PARCEIROS</span><span class="brand-sub">ENGENHARIA &amp; SOLUÇÕES</span></span>
+      </a>
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false">MENU ☰</button>
+      <nav class="navlinks" id="navLinks">
+        <a href="#sobre">A APS</a><a href="#servicos">Serviços</a><a href="#publicos">Soluções</a><a href="#processo">Como trabalhamos</a><a href="#contato">Contato</a>
+      </nav>
+      <a class="btn" href="#contato">SOLICITAR PROPOSTA ↗</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="wrap hero-content">
+        <span class="eyebrow">APS PARCEIROS · LITORAL NORTE SP</span>
+        <h1>Construir bem.<br><em>Investir melhor.</em></h1>
+        <p>Engenharia, gestão de obras e soluções para construção civil. Do planejamento à execução, conectamos conhecimento técnico, organização e visão de negócio para transformar projetos em resultados.</p>
+        <div class="hero-actions">
+          <a class="btn" href="#contato">CONVERSE COM A APS ↗</a>
+          <a class="btn outline" href="#servicos">CONHEÇA OS SERVIÇOS</a>
+        </div>
+        <div class="hero-note"><span>Gestão e planejamento</span><span>Projetos e soluções técnicas</span><span>Construção e investimento</span></div>
+      </div>
+    </section>
+
+    <section class="intro" id="sobre">
+      <div class="wrap intro-grid">
+        <div>
+          <span class="eyebrow">QUEM SOMOS</span>
+          <h2>Engenharia com planejamento. Construção com propósito.</h2>
+          <p class="lead">A APS PARCEIROS reúne soluções para quem deseja construir, reformar, administrar uma obra ou avaliar oportunidades no mercado imobiliário.</p>
+          <p class="intro-copy">Acreditamos que uma boa construção começa muito antes da primeira etapa no canteiro. É preciso compreender os objetivos do cliente, organizar as decisões, avaliar custos, coordenar atividades e acompanhar a execução com responsabilidade técnica.</p>
+          <p class="intro-copy">Atuamos com foco no Litoral Norte de São Paulo, aproximando proprietários, investidores e profissionais de soluções de engenharia e construção civil. Qualidade, segurança e agilidade orientam nosso trabalho, com atendimento próximo, transparência e acompanhamento pós-venda.</p>
+          <a class="btn dark" href="#contato">FALE COM NOSSA EQUIPE ↗</a>
+        </div>
+        <div class="intro-photo">
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85" alt="Projeto arquitetônico residencial contemporâneo" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85'">
+          <div class="photo-tag">Soluções inteligentes para engenharia civil.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="wrap stats-grid">
+        <div class="stat"><strong>Visão integrada</strong><span>Planejamento, técnica e execução conectados</span></div>
+        <div class="stat"><strong>Qualidade e segurança</strong><span>Agilidade, transparência e acompanhamento pós-venda</span></div>
+        <div class="stat"><strong>Litoral Norte · SP</strong><span>Atuação regional e conhecimento do contexto local</span></div>
+      </div>
+    </section>
+
+    <section class="services" id="servicos">
+      <div class="wrap">
+        <div class="section-head">
+          <div><span class="eyebrow">O QUE FAZEMOS</span><h2>Soluções para cada etapa<br>da sua construção.</h2></div>
+          <p class="lead">Serviços que podem ser contratados conforme a necessidade do projeto, desde estudos iniciais até acompanhamento e gestão da execução.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card">
+            <div class="service-img"><img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" alt="Gestão e acompanhamento de obra" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80'"></div>
+            <div class="service-content"><span class="service-number">01 / GESTÃO</span><h3>Gerenciamento de obras</h3><p>Organização e acompanhamento para manter as etapas da obra alinhadas ao planejamento aprovado.</p><ul><li>Planejamento e cronograma físico-financeiro</li><li>Controle de custos, compras e materiais</li><li>Coordenação de equipes e fornecedores</li><li>Medições, registros e relatórios de evolução</li><li>Acompanhamento de qualidade e prazos</li></ul><a class="service-link" href="#contato">Solicitar uma avaliação ↗</a></div>
+          </article>
+          <article class="service-card">
+            <div class="service-img"><img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80" alt="Pranchas e projetos de arquitetura"></div>
+            <div class="service-content"><span class="service-number">02 / PROJETOS</span><h3>Projetos de engenharia</h3><p>Desenvolvimento e integração de soluções técnicas para orientar a execução da construção.</p><ul><li>Projetos arquitetônicos</li><li>Projetos estruturais</li><li>Instalações elétricas e hidrossanitárias</li><li>Climatização e projetos complementares</li><li>Compatibilização e documentação técnica</li></ul><a class="service-link" href="#contato">Falar sobre meu projeto ↗</a></div>
+          </article>
+          <article class="service-card">
+            <div class="service-img"><img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" alt="Profissional acompanhando obra"></div>
+            <div class="service-content"><span class="service-number">03 / CONTROLE TÉCNICO</span><h3>Fiscalização e vistoria técnica</h3><p>Verificação das condições aparentes da edificação e da conformidade dos serviços com as referências técnicas e contratuais aplicáveis.</p><ul><li>Acompanhamento de serviços executados</li><li>Verificação em relação aos projetos</li><li>Inspeções e registros fotográficos</li><li>Relatórios e apontamentos técnicos</li><li>Identificação de manifestações aparentes</li></ul><a class="service-link" href="#contato">Agendar atendimento ↗</a></div>
+          </article>
+          <article class="service-card">
+            <div class="service-img"><img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=800&q=80" alt="Interior residencial reformado"></div>
+            <div class="service-content"><span class="service-number">04 / EXECUÇÃO</span><h3>Construções e reformas</h3><p>Soluções para obras residenciais e comerciais, ampliações e modernização de espaços.</p><ul><li>Construções residenciais e comerciais</li><li>Reformas e ampliações</li><li>Execução e adequação de ambientes</li><li>Orçamento e planejamento de serviços</li><li>Coordenação de mão de obra</li></ul><a class="service-link" href="#contato">Planejar minha obra ↗</a></div>
+          </article>
+          <article class="service-card">
+            <div class="service-img"><img src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=800&q=80" alt="Inspeção técnica de instalação predial"></div>
+            <div class="service-content"><span class="service-number">05 / REGULARIZAÇÃO</span><h3>AVCB / CLCB</h3><p>Orientação e apoio técnico para processos de segurança contra incêndio, conforme o enquadramento da edificação.</p><ul><li>Análise preliminar das necessidades</li><li>Orientação sobre documentação</li><li>Projetos e adequações cabíveis</li><li>Acompanhamento de etapas do processo</li></ul><a class="service-link" href="#contato">Consultar minha necessidade ↗</a></div>
+          </article>
+          <article class="service-card">
+            <div class="service-img"><img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=800&q=80" alt="Engenharia e tecnologia aplicada"></div>
+            <div class="service-content"><span class="service-number">06 / TECNOLOGIA</span><h3>Sistemas e ferramentas para engenharia</h3><p>Tecnologia aplicada ao cálculo, ao dimensionamento e ao planejamento de materiais na construção civil.</p><ul><li>Mais de 20 ferramentas para engenharia</li><li>Cálculo estrutural em concreto armado</li><li>Dimensionamento e detalhamento de lajes, vigas, pilares, fundações, escadas e muros</li><li>Quantitativos de materiais e cargas</li><li>Relatórios em PDF e suporte técnico</li></ul><a class="service-link" href="#contato">Conhecer as soluções da APS ↗</a></div>
+          </article>
+          <article class="service-card">
+            <div class="service-img"><img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=80" alt="Empreendimento imobiliário residencial"></div>
+            <div class="service-content"><span class="service-number">07 / INVESTIMENTOS</span><h3>Consultoria para construção e investimentos</h3><p>Apoio no estudo e planejamento de empreendimentos imobiliários, com atenção aos custos, etapas e objetivos do investimento.</p><ul><li>Estudos preliminares de viabilidade</li><li>Estimativas e cenários de custos</li><li>Análise de potencial construtivo</li><li>Planejamento de empreendimentos</li><li>Acompanhamento e gestão de obra</li></ul><a class="service-link" href="#contato">Conversar sobre investimento ↗</a></div>
+          </article>
+          <article class="service-card">
+            <div class="service-img"><img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" alt="Equipe em ambiente de construção"></div>
+            <div class="service-content"><span class="service-number">08 / ORÇAMENTO</span><h3>Orçamento e planejamento</h3><p>Informações para apoiar decisões antes e durante a obra, com premissas claras e referências adequadas.</p><ul><li>Levantamento de quantitativos</li><li>Composições e estimativas de custos</li><li>Referências SINAPI e CUB quando aplicáveis</li><li>Previsão de desembolsos</li><li>Comparação de alternativas construtivas</li></ul><a class="service-link" href="#contato">Solicitar orçamento ↗</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="audience" id="publicos">
+      <div class="wrap">
+        <span class="eyebrow">PARA QUEM CONSTRUÍMOS</span>
+        <h2>Seu objetivo é o ponto<br>de partida do projeto.</h2>
+        <div class="audience-grid">
+          <article class="audience-card">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1100&q=85" alt="Residência contemporânea">
+            <div class="audience-copy"><span class="eyebrow">PROPRIETÁRIOS</span><h3>Vai construir ou reformar?</h3><p>Tenha apoio para organizar o escopo, compreender custos, planejar etapas e acompanhar a execução da sua obra com mais clareza.</p></div>
+          </article>
+          <article class="audience-card">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1100&q=85" alt="Edifícios de empreendimento imobiliário">
+            <div class="audience-copy"><span class="eyebrow">INVESTIDORES E EMPRESAS</span><h3>Planeja investir na construção?</h3><p>Avalie premissas, custos, cronograma e alternativas do empreendimento. Transforme decisões de investimento em um plano de execução acompanhado.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="process" id="processo">
+      <div class="wrap">
+        <span class="eyebrow">NOSSO MÉTODO</span>
+        <h2>Clareza do primeiro contato<br>à entrega de cada etapa.</h2>
+        <p class="lead">Cada contratação é dimensionada conforme o tipo, a complexidade e as necessidades do empreendimento.</p>
+        <div class="process-grid">
+          <div class="step"><b>01</b><h3>Entendimento</h3><p>Conhecemos o objetivo, o local, as condições e as necessidades do cliente.</p></div>
+          <div class="step"><b>02</b><h3>Estudo e proposta</h3><p>Definimos escopo, premissas, responsabilidades, prazos e condições comerciais.</p></div>
+          <div class="step"><b>03</b><h3>Planejamento</h3><p>Organizamos as etapas, recursos, documentos e critérios de acompanhamento.</p></div>
+          <div class="step"><b>04</b><h3>Acompanhamento</h3><p>Executamos o serviço contratado, registrando informações e alinhando decisões.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="why">
+      <div class="wrap why-grid">
+        <div>
+          <span class="eyebrow">POR QUE APS PARCEIROS</span>
+          <h2>Decisões melhores começam com informação e organização.</h2>
+          <p class="lead">Nosso compromisso é oferecer atendimento claro e soluções coerentes com as necessidades de cada obra ou empreendimento.</p>
+          <div class="why-list">
+            <div class="why-item"><strong>Qualidade</strong><span>Atenção aos critérios técnicos e ao escopo contratado.</span></div>
+            <div class="why-item"><strong>Segurança</strong><span>Responsabilidade e cuidado em cada etapa do trabalho.</span></div>
+            <div class="why-item"><strong>Agilidade</strong><span>Comunicação objetiva e processos organizados.</span></div>
+            <div class="why-item"><strong>Relacionamento</strong><span>Atendimento próximo e suporte ao cliente.</span></div>
+            <div class="why-item"><strong>Visão de custos</strong><span>Planejamento e acompanhamento de recursos.</span></div>
+            <div class="why-item"><strong>Soluções integradas</strong><span>Engenharia, gestão e tecnologia em um só relacionamento.</span></div>
+          </div>
+        </div>
+        <div class="why-photo"><img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1100&q=85" alt="Acompanhamento de atividades em canteiro de obras"></div>
+      </div>
+    </section>
+
+    <section class="region">
+      <div class="wrap region-box">
+        <div class="region-photo"><img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1100&q=85" alt="Paisagem litorânea do litoral paulista"></div>
+        <div class="region-copy">
+          <span class="eyebrow">ONDE ATUAMOS</span>
+          <h2>Presença no Litoral Norte de São Paulo.</h2>
+          <p>Atendimento para proprietários, investidores e empresas que precisam de soluções em engenharia e construção civil na região. Consulte a disponibilidade para sua cidade e tipo de serviço.</p>
+          <div class="region-list"><span>Ubatuba</span><span>Caraguatatuba</span><span>São Sebastião</span><span>Ilhabela</span><span>Região do Litoral Norte</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contato">
+      <div class="wrap contact-grid">
+        <div>
+          <span class="eyebrow">VAMOS CONVERSAR</span>
+          <h2>Seu próximo projeto merece começar com um bom planejamento.</h2>
+          <p class="lead">Conte o que você pretende construir, reformar ou desenvolver. A equipe da APS PARCEIROS poderá entender sua necessidade e orientar os próximos passos.</p>
+          <div class="contact-details">
+            <div><small>E-mail</small><a href="mailto:apsparceiros@gmail.com">apsparceiros@gmail.com</a></div>
+            <div><small>Região de atendimento</small>Litoral Norte de São Paulo</div>
+            <div><small>Responsável / contato institucional</small>Antonio Silva · Engenheiro Civil</div>
+            <div><small>Site</small><a href="https://www.apsparceiros.com.br/" target="_blank" rel="noopener">www.apsparceiros.com.br</a></div>
+          </div>
+        </div>
+        <div class="contact-panel">
+          <h3>Vamos tirar sua ideia do papel?</h3>
+          <p>Escolha o canal de contato e envie uma breve descrição da sua necessidade.</p>
+          <a class="btn" id="whatsCta" href="#" target="_blank" rel="noopener">SOLICITAR ATENDIMENTO PELO WHATSAPP ↗</a>
+          <a class="btn outline" href="mailto:apsparceiros@gmail.com?subject=Solicita%C3%A7%C3%A3o%20de%20or%C3%A7amento%20-%20APS%20PARCEIROS">ENVIAR E-MAIL ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-row"><div><strong>APS PARCEIROS</strong> · Engenharia, Construção e Soluções</div><div>© <span id="year"></span> APS PARCEIROS. Todos os direitos reservados.</div></div>
+  </footer>
+  <a class="wa-float" id="whatsFloat" href="#" target="_blank" rel="noopener" aria-label="Fale com a APS pelo WhatsApp">WHATSAPP ↗</a>
+
+  <script>
+    // PERSONALIZAÇÃO OBRIGATÓRIA:
+    // Substitua pelo número oficial do WhatsApp com código do país e DDD.
+    // Exemplo de formato: 5512999999999 (somente números).
+    const WHATSAPP_NUMBER = "5512999999999";
+    const WHATSAPP_MESSAGE = "Olá! Acessei o site da APS PARCEIROS e gostaria de informações sobre os serviços de engenharia e construção.";
+    const phoneReady = /^\d{12,13}$/.test(WHATSAPP_NUMBER) && WHATSAPP_NUMBER !== "5512999999999";
+    const whatsappUrl = phoneReady
+      ? `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`
+      : "mailto:apsparceiros@gmail.com?subject=Contato%20-%20APS%20PARCEIROS";
+    document.getElementById("whatsCta").href = whatsappUrl;
+    document.getElementById("whatsFloat").href = whatsappUrl;
+    document.getElementById("year").textContent = new Date().getFullYear();
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+    menuBtn.addEventListener("click", () => {
+      const open = navLinks.classList.toggle("open");
+      menuBtn.setAttribute("aria-expanded", String(open));
+    });
+    navLinks.querySelectorAll("a").forEach(link => link.addEventListener("click", () => {
+      navLinks.classList.remove("open");
+      menuBtn.setAttribute("aria-expanded", "false");
+    }));
+  </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+APS PARCEIROS — PUBLICAÇÃO MANUAL NO REPOSITÓRIO APSParceiros
+
+REPOSITÓRIO CORRETO
+https://github.com/apsparceiros-svg/APSParceiros
+
+ARQUIVOS
+- index.html: página principal do novo site.
+- CNAME: domínio personalizado www.apsparceiros.com.br.
+- .nojekyll: evita processamento Jekyll desnecessário.
+
+COMO PUBLICAR
+1. Abra o repositório APSParceiros no GitHub.
+2. Confirme que está na branch principal (geralmente main).
+3. Clique em Add file > Upload files.
+4. Arraste os ARQUIVOS desta pasta (index.html, CNAME e .nojekyll) para a raiz do repositório. Não envie apenas a pasta nem apenas o ZIP.
+5. Clique em Commit changes.
+6. Abra Settings > Pages.
+7. Em Build and deployment, selecione Deploy from a branch, escolha a branch main (ou a branch principal existente) e a pasta /(root), se essa for a estrutura do projeto.
+8. Aguarde o GitHub Pages concluir o deploy.
+
+DOMÍNIO
+O arquivo CNAME indica www.apsparceiros.com.br. Antes de alterar DNS no Registro.br, confira em Settings > Pages se o domínio personalizado foi reconhecido e se o GitHub mostra a verificação de DNS. Não apague nem altere registros MX, SPF, DKIM ou TXT usados pelo e-mail.
+
+WHATSAPP
+O HTML ainda contém um número de exemplo (5512999999999). Até que seja substituído pelo número oficial, os botões de WhatsApp direcionam para o e-mail apsparceiros@gmail.com. Substitua no index.html pelo número completo, somente dígitos, com 55 + DDD + número.
+
+IMPORTANTE
+Este pacote não altera automaticamente o repositório, o site atual ou o DNS. Faça o deploy e teste a página antes de mudar qualquer configuração de domínio.
